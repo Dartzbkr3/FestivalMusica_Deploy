@@ -252,7 +252,7 @@ h3 {
 }
 
 .header .contenido-header {
-    padding: 2.5rem 0
+    padding: 1rem 0
 }
 
 @media (min-width: 768px) {
@@ -277,12 +277,37 @@ h3 {
 
 .header.fijo {
     position: fixed;
+    top: 0;
     width: 100%;
-    box-shadow: 0 .3rem .4rem #444
+    box-shadow: 0 .3rem .4rem #444;
+    z-index: 2
+}
+
+.fijo+.video {
+    padding-top: 9.9rem
+}
+
+@media (min-width: 768px) {
+    .fijo+.video {
+        padding-top: 6.6rem
+    }
+}
+
+.fijo~.lineup,
+.fijo~.galeria {
+    padding-top: 19.8rem
+}
+
+@media (min-width: 768px) {
+    .fijo~.lineup,
+    .fijo~.galeria {
+        padding-top: 13.2rem
+    }
 }
 
 .navegacion-principal {
     display: flex;
+    justify-content: center;
     gap: 2rem
 }
 
@@ -431,13 +456,11 @@ video {
 
 .calendario li {
     padding: 2.5rem;
-    font-weight: 700;
-    font-size: 2rem;
+    font-weight: 700
 }
 
 .calendario span {
-    font-weight: 400;
-    font-size: 2rem;
+    font-weight: 400
 }
 
 .bg-verde .calendario li:nth-child(odd) {
